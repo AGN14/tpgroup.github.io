@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Bulletin</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+    
+        header {
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            padding: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            color: #fff;
+            margin: 0;
+        }
+    
+        nav {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        nav a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+    
+        nav a:hover {
+            background-color: #2980b9;
+        }
+    
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+    
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+    
+        button:hover {
+            background-color: #2980b9;
+        }
+    
+        .bulletin {
+            max-width: 800px;
+            margin: 20px auto;
+            display: none;
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+    
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+    
+        a:hover {
+            color: #2ecc71;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <header>
+        <h1>Formulaire de Bulletin</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="emploi-du-temps.html">Emploi du Temps</a>
+        <a href="bulletin.html">Bulletin</a>
+        <a href="Clé-de-connexion.html">Clé de connexion Bulletin</a>
+
+    </nav>
+
+    <form id="bulletinForm">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="classe">Classe :</label>
+        <input type="text" id="classe" name="classe" required>
+
+        <button type="button" onclick="verifierBulletin()">Soumettre</button>
+    </form>
+
+    <div class="bulletin" id="bulletinDieudonne">
+        <h2>Bulletin - AGNILA Dieudonne </h2>
+        <table border="1">
+            <tr>
+                <th>Matière</th>
+                <th>Note</th>
+                <th>Interrogation 1</th>
+                <th>Interrogation 2</th>
+                <th>Moyenne Générale</th>
+            </tr>
+            <tr>
+                <td>Algorithmique</td>
+                <td>18</td>
+                <td>15</td>
+                <td>16</td>
+                <td>16.33</td>
+            </tr>
+            <tr>
+                <td>Langage C</td>
+                <td>16</td>
+                <td>14</td>
+                <td>12</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>HTML, CSS et JavaScript</td>
+                <td>17</td>
+                <td>18</td>
+                <td>15</td>
+                <td>16.67</td>
+            </tr>
+            <tr>
+                <td>Structure de données</td>
+                <td>13</td>
+                <td>10</td>
+                <td>14</td>
+                <td>12.33</td>
+            </tr>
+            <tr>
+                <td>Ensemble des réels</td>
+                <td>09</td>
+                <td>08</td>
+                <td>10</td>
+                <td>09</td>
+            </tr>
+            <tr>
+                <td>Analyse 1</td>
+                <td>04</td>
+                <td>06</td>
+                <td>05</td>
+                <td>05</td>
+            </tr>
+            <tr>
+                <td>Architecture des ordinateurs</td>
+                <td>14</td>
+                <td>12</td>
+                <td>15</td>
+                <td>13.67</td>
+            </tr>
+            <tr>
+                <td>Anglais</td>
+                <td>19</td>
+                <td>18</td>
+                <td>20</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>ATO</td>
+                <td>10</td>
+                <td>09</td>
+                <td>11</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td colspan="4">Moyenne Générale</td>
+                <td>14.45</td> <!-- Remplacez ceci par la moyenne générale calculée -->
+            </tr>
+        </table>
+        <strong><p>La moyenne générale de l'étudiant est de 14.45 sur 20.</p></strong>
+        
+    </div>
+
+    <div class="bulletin" id="bulletinEunice">
+        <h2>Bulletin - AYIGBEDE Eunice </h2>
+     <table>
+        <tr>
+            <th>Matière</th>
+            <th>Note</th>
+            <th>Interrogation 1</th>
+            <th>Interrogation 2</th>
+            <th>Moyenne Générale</th>
+        </tr>
+        <tr>
+            <td>Algorithmique</td>
+            <td>16</td>
+            <td>14</td>
+            <td>15</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Langage C</td>
+            <td>14</td>
+            <td>12</td>
+            <td>13</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>HTML, CSS et JavaScript</td>
+            <td>18</td>
+            <td>16</td>
+            <td>17</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Structure de données</td>
+            <td>12</td>
+            <td>11</td>
+            <td>14</td>
+            <td>12.33</td>
+        </tr>
+        <tr>
+            <td>Ensemble des réels</td>
+            <td>10</td>
+            <td>09</td>
+            <td>11</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Analyse 1</td>
+            <td>06</td>
+            <td>07</td>
+            <td>08</td>
+            <td>7.67</td>
+        </tr>
+        <tr>
+            <td>Architecture des ordinateurs</td>
+            <td>15</td>
+            <td>14</td>
+            <td>16</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Anglais</td>
+            <td>20</td>
+            <td>19</td>
+            <td>18</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>ATO</td>
+            <td>11</td>
+            <td>10</td>
+            <td>12</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td colspan="4">Moyenne Générale</td>
+            <td>15.11</td> <!-- Remplacez ceci par la moyenne générale calculée -->
+            <strong><p>La moyenne générale de l'étudiant est de 15.11 sur 20.</p></strong>
+
+        </tr>
+     </table>  
+    </div>
+
+    <div class="bulletin" id="bulletinFloriane">
+        <h2>Bulletin - HESSOUH Floriane </h2>
+        <table border="1">
+            <tr>
+                <th>Matière</th>
+                <th>Note</th>
+                <th>Interrogation 1</th>
+                <th>Interrogation 2</th>
+                <th>Moyenne Générale</th>
+            </tr>
+            <tr>
+                <td>Algorithmique</td>
+                <td>16</td>
+                <td>14</td>
+                <td>15</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Langage C</td>
+                <td>14</td>
+                <td>12</td>
+                <td>13</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>HTML, CSS et JavaScript</td>
+                <td>18</td>
+                <td>16</td>
+                <td>17</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Structure de données</td>
+                <td>12</td>
+                <td>11</td>
+                <td>14</td>
+                <td>12.33</td>
+            </tr>
+            <tr>
+                <td>Ensemble des réels</td>
+                <td>10</td>
+                <td>09</td>
+                <td>11</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Analyse 1</td>
+                <td>06</td>
+                <td>07</td>
+                <td>08</td>
+                <td>7.67</td>
+            </tr>
+            <tr>
+                <td>Architecture des ordinateurs</td>
+                <td>15</td>
+                <td>14</td>
+                <td>16</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Anglais</td>
+                <td>20</td>
+                <td>19</td>
+                <td>18</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>ATO</td>
+                <td>11</td>
+                <td>10</td>
+                <td>12</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td colspan="4">Moyenne Générale</td>
+                <td>14.42</td> <!-- Remplacez ceci par la moyenne générale calculée -->
+            </tr>
+        </table>
+        <strong><p>La moyenne générale de l'étudiant est de 14.42 sur 20.</p></strong>
+    </div>
+
+    <div class="bulletin" id="bulletinLoann">
+        <h2>Bulletin - GBENAFA Loann</h2>
+        <table border="1">
+            <tr>
+                <th>Matière</th>
+                <th>Note</th>
+                <th>Interrogation 1</th>
+                <th>Interrogation 2</th>
+                <th>Moyenne Générale</th>
+            </tr>
+            <tr>
+                <td>Algorithmique</td>
+                <td>17</td>
+                <td>16</td>
+                <td>18</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Langage C</td>
+                <td>15</td>
+                <td>14</td>
+                <td>16</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>HTML, CSS et JavaScript</td>
+                <td>19</td>
+                <td>18</td>
+                <td>17</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>Structure de données</td>
+                <td>14</td>
+                <td>13</td>
+                <td>15</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>Ensemble des réels</td>
+                <td>12</td>
+                <td>11</td>
+                <td>13</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Analyse 1</td>
+                <td>08</td>
+                <td>09</td>
+                <td>10</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Architecture des ordinateurs</td>
+                <td>16</td>
+                <td>17</td>
+                <td>15</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Anglais</td>
+                <td>20</td>
+                <td>19</td>
+                <td>18</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>ATO</td>
+                <td>13</td>
+                <td>12</td>
+                <td>14</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td colspan="4">Moyenne Générale</td>
+                <td>16.11</td> <!-- Remplacez ceci par la moyenne générale calculée -->
+            </tr>
+        </table>
+        <strong><p>La moyenne générale de l'étudiant est de 16.11 sur 20.</p></strong>
+    </div>
+
+    <div class="bulletin" id="bulletinFadilath">
+        <h2>Bulletin - ADEGNILE Fadilath</h2>
+        <table border="1">
+            <tr>
+                <th>Matière</th>
+                <th>Note</th>
+                <th>Interrogation 1</th>
+                <th>Interrogation 2</th>
+                <th>Moyenne Générale</th>
+            </tr>
+            <tr>
+                <td>Algorithmique</td>
+                <td>16</td>
+                <td>15</td>
+                <td>17</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Langage C</td>
+                <td>14</td>
+                <td>13</td>
+                <td>15</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>HTML, CSS et JavaScript</td>
+                <td>18</td>
+                <td>17</td>
+                <td>16</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Structure de données</td>
+                <td>12</td>
+                <td>11</td>
+                <td>13</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Ensemble des réels</td>
+                <td>10</td>
+                <td>09</td>
+                <td>11</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Analyse 1</td>
+                <td>07</td>
+                <td>08</td>
+                <td>09</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Architecture des ordinateurs</td>
+                <td>15</td>
+                <td>16</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Anglais</td>
+                <td>19</td>
+                <td>18</td>
+                <td>20</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>ATO</td>
+                <td>11</td>
+                <td>10</td>
+                <td>12</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td colspan="4">Moyenne Générale</td>
+                <td>15.44</td> <!-- Remplacez ceci par la moyenne générale calculée -->
+            </tr>  
+        </table>
+        <strong><p>La moyenne générale de l'étudiant est de 15.44 sur 20.</p></strong>
+    </div>
+
+
+    <script>
+        function verifierBulletin() {
+            // Récupérer les valeurs du formulaire
+            var nom = document.getElementById("nom").value;
+            var prenom = document.getElementById("prenom").value;
+            var classe = document.getElementById("classe").value;
+
+            // Masquer tous les bulletins
+            var bulletins = document.querySelectorAll('.bulletin');
+            for (var i = 0; i < bulletins.length; i++) {
+                bulletins[i].style.display = 'none';
+            }
+
+            // Vérifier les informations et afficher le bulletin correspondant
+            if (nom === "AGNILA" && prenom === "Dieudonne" && classe === "L1 IRT G2") {
+                document.getElementById("bulletinDieudonne").style.display = 'block';
+            } else if (nom === "AYIGBEDE" && prenom === "Eunice" && classe === "L1 IRT G2") {
+                document.getElementById("bulletinEunice").style.display = 'block';
+            } else if (nom === "HESSOUH" && prenom === "Floriane" && classe === "L1 IRT G2") {
+                document.getElementById("bulletinFloriane").style.display = 'block';
+            } else if (nom === "GBENAFA" && prenom === "Loann" && classe === "L1 IRT G2") {
+                document.getElementById("bulletinLoann").style.display = 'block';
+            } else if (nom === "ADEGNILE" && prenom === "Fadilath" && classe === "L1 IRT G2") {
+                document.getElementById("bulletinFadilath").style.display = 'block';
+            } else {
+                alert("Aucun membre trouvé avec ces informations.");
+            }
+        }
+    </script>
+
+</body>
+</html>
